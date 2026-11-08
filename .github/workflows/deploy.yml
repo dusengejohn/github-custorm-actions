@@ -61,3 +61,5 @@ jobs:
         run: ls
       - name: Deploy site
         run: echo "Deploying..."
+      - name: Print a debug message
+        run: echo "::debug:This is a debug message"
