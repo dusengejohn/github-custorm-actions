@@ -15,6 +15,10 @@ jobs:
           cache-key: 'false'
       - name: Lint code
         run: npm run lint
+      - name: Print GITHUB_TOKEN
+        run: |
+          echo This is secret GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}
+          echo This is github.token ${{ github.token }}
   test:
     runs-on: ubuntu-latest
     steps:
