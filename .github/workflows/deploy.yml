@@ -19,6 +19,11 @@ jobs:
         run: |
           echo This is secret GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}
           echo This is github.token ${{ github.token }}
+      - name: Print GITHUB_TOKEN as env variable
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo This is secret GITHUB_TOKEN $GITHUB_TOKEN
   test:
     runs-on: ubuntu-latest
     steps:
